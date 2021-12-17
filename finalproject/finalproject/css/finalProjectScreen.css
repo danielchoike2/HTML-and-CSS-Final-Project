@@ -1,0 +1,147 @@
+﻿* {
+    box-sizing: border-box;
+    }
+    
+    body {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        animation: fadeInAnimation ease 3s
+         
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+         }
+    }
+    h2 {
+        font-size: 1em;
+        color:blue;
+        text-shadow: 1px 1px 1px  black;
+    }
+    img{
+        width:200px;
+        float:left;
+        max-height:200px;
+        border-radius:20px;
+        box-shadow:2px 2px black;
+        background-color: yellow;           
+        opacity: 0.2;
+        filter: alpha(opacity=20);  
+    }
+    img:hover{
+        opacity:1.0;
+    }
+    a:link, a:visited, a:hover, a:active{
+            color:blue;
+            text-decoration:none;
+    }	
+    /* css sytling for menu */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: maroon;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: blue;
+        color:white;
+        border-radius:10px;
+    }
+        
+    /* Style the css menu*/
+    nav {
+        background-color: #333;
+        padding:10px;
+        position:center;
+    }
+    /* style the header */	
+    header {
+        background-color: #333;
+        color: white;
+        -webkit-text-stroke: .3px rgb(3, 84, 233);
+        -webkit-text-fill-color:rgb(12, 99, 231);
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+    }	
+    /* Style the footer */
+    footer {
+        background-color: rgb(73, 73, 73);
+        color: blue;
+        
+        padding: 10px;
+        text-align: right;
+    }
+   
+    
+    
+
+    /* styling for sections within the article element */	
+     article > section {
+        text-align:center;
+        border: 2px #333 solid;
+        font-size:1em;
+        background-color:white;
+        max-height:400px;
+        overflow:auto;
+    }
+    aside{
+        margin:.5%;
+        box-shadow:1px 1px #333;
+        border-radius:10px;
+        padding:10px;	
+        color:blue;
+        
+    }	
+    /* Grid Classes */
+    .top{grid-area:t}
+    .note{grid-area:n}
+    .bottom{grid-area:b}
+    .menu{grid-area:m}
+    .left{grid-area:l}
+    .middle{grid-area:mid}
+    .right{grid-area:r}
+    
+    /* Default grid container */
+    .grid-container {
+     display: grid;
+     grid-template-rows:max-content;
+     grid-template-areas:
+     't t t t t t'
+     'm m m m m m'
+     'l l mid mid r r '
+     'n n n n n n'
+     'b b b b b b';
+    }
+    
+    /* Mobile grid container */
+    @media (max-width: 600px) {
+    .grid-container {
+     grid-template-areas:
+     't t t t t t'
+     'm m m m m m'
+     'l l l l l l '
+     'mid mid mid mid mid mid '
+     'r r r r r r '
+     'n n n n n n'
+     'b b b b b b';
+    }
+    }
+
+    .footers{
+        color: cyan;
+    }
+    
